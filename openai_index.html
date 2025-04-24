@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리더십 대화 챗봇 (OpenAI 버전)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>리더십 대화 챗봇 (OpenAI 버전)</h1>
+            <p>다양한 유형의 어려운 직원과 대화하며 리더십 기술을 연습해보세요</p>
+        </header>
+
+        <div class="employee-selector">
+            <h2>직원 유형 선택</h2>
+            <div class="employee-types">
+                <button id="type1" class="employee-type">
+                    <h3>피해자 코스프레형</h3>
+                    <p>"나는 늘 억울해요"</p>
+                    <small>실수나 문제가 생겨도 늘 남 탓을 하며, 감정적으로 의존하거나 방어적 태도를 보임</small>
+                </button>
+                <button id="type2" class="employee-type">
+                    <h3>뒷담화 유포형</h3>
+                    <p>"말은 안 해도, 다 말해요"</p>
+                    <small>동료나 사장의 말과 행동을 왜곡해 퍼뜨리며 내부 갈등을 조장함</small>
+                </button>
+                <button id="type3" class="employee-type">
+                    <h3>매사 핑계형</h3>
+                    <p>"알겠습니다...만 안 할게요"</p>
+                    <small>사장의 말에 표면적으로는 따르지만 실제로는 무시하거나 핑계를 댐</small>
+                </button>
+            </div>
+        </div>
+
+        <div class="chat-container" id="chatContainer" style="display: none;">
+            <div class="chat-box" id="chatBox"></div>
+            <div class="user-input">
+                <input type="text" id="userMessage" placeholder="사장님으로서 대화를 입력하세요...">
+                <button id="sendButton">전송</button>
+            </div>
+            <div class="chat-options">
+                <label for="useAI">
+                    <input type="checkbox" id="useAI" checked> OpenAI 사용 (API 키 필요)
+                </label>
+                <button id="resetButton" class="reset-button">대화 초기화</button>
+            </div>
+            <div class="api-key-container" id="apiKeyContainer">
+                <input type="text" id="apiKeyInput" placeholder="OpenAI API 키를 입력하세요">
+                <button id="saveApiKey">저장</button>
+            </div>
+            <div class="openai-notice">
+                <p>OpenAI API 키는 <a href="https://platform.openai.com" target="_blank">OpenAI 플랫폼</a>에서 얻을 수 있습니다.</p>
+                <p>API 사용 시 비용이 발생할 수 있으니 주의하세요.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>이 챗봇은 리더십 대화 훈련을 위한 도구입니다. 실제 상황에서는 더 다양한 요소들을 고려해야 합니다.</p>
+        <p>무료로 사용하고 싶다면 <a href="advanced_index.html">Ollama 버전</a>을 사용해보세요.</p>
+    </footer>
+
+    <script src="openai_chat.js"></script>
+</body>
+</html> 

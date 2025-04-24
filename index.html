@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리더십 대화   챗봇</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>리더십 대화 챗봇</h1>
+            <p>문제 직원 유형을 선택하고 대화를 시작하세요</p>
+        </header>
+
+        <div class="employee-selector">
+            <h2>직원 유형 선택</h2>
+            <div class="employee-types">
+                <button id="type1" class="employee-type">
+                    <h3>피해자 코스프레형</h3>
+                    <p>"나는 늘 억울해요"</p>
+                </button>
+                <button id="type2" class="employee-type">
+                    <h3>뒷담화 유포형</h3>
+                    <p>"말은 안 해도, 다 말해요"</p>
+                </button>
+                <button id="type3" class="employee-type">
+                    <h3>매사 핑계형</h3>
+                    <p>"알겠습니다...만 안 할게요"</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="chat-container" id="chatContainer" style="display: none;">
+            <div class="chat-box" id="chatBox"></div>
+            <div class="user-input">
+                <input type="text" id="userMessage" placeholder="메시지를 입력하세요...">
+                <button id="sendButton">전송</button>
+            </div>
+            <button id="resetButton" class="reset-button">대화 초기화</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
